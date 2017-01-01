@@ -69,6 +69,8 @@ pause
 netsh winsock reset
 netsh wlan start hostednetwork
 netsh wlan stop hostednetwork
+powershell -command "& {&'Disable-NetAdapter' *}"
+powershell -command & {&'Enable-NetAdapter' *}
 @echo off
 echo Allright! Done.
 pause
