@@ -2,7 +2,6 @@
 :: Elevate.cmd - Version 4
 :: Automatically check & get admin rights
 ::::::::::::::::::::::::::::::::::::::::::::
- @echo off
  CLS
  ECHO.
  ECHO =============================
@@ -26,7 +25,7 @@
   if '%1'=='ELEV' (echo ELEV & shift /1 & goto gotPrivileges)
   ECHO.
   ECHO **************************************
-  ECHO Voga Software Windows Admin Shell
+  ECHO Invoking UAC for Privilege Escalation
   ECHO **************************************
 
   ECHO Set UAC = CreateObject^("Shell.Application"^) > "%vbsGetPrivileges%"
@@ -56,6 +55,23 @@
  ::::::::::::::::::::::::::::
  ::START
  ::::::::::::::::::::::::::::
- REM Run shell as admin (example) - put here code as you like
- ECHO %batchName% Arguments: P1=%1 P2=%2 P3=%3 P4=%4 P5=%5 P6=%6 P7=%7 P8=%8 P9=%9
- cmd /k
+@echo off
+cls
+echo Welcome to the NetSH super patch.
+pause
+echo.
+echo.
+echo Allright, so you should have just granted me admin perms
+echo Now it's time to actually do my job
+echo.
+pause
+@echo on
+netsh winsock reset
+netsh wlan start hostednetwork
+netsh wlan stop hostednetwork
+@echo off
+echo Allright! Done.
+pause
+echo.
+echo You MUST now restart your system. It will automatically happen within a minute.
+shutdown /r

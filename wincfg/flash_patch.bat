@@ -57,7 +57,7 @@
  ::::::::::::::::::::::::::::
 @echo off
 cls
-echo Welcome to the NetSH wlan server reset system
+echo Welcome to the NetSH super patch.
 pause
 echo.
 echo.
@@ -73,4 +73,5 @@ netsh wlan stop hostednetwork
 echo Allright! Done.
 pause
 echo.
-echo It may take up to 5 to 10 minutes to propogate in your system
+echo You MUST now restart your system. It will automatically happen within a minute.
+shutdown /r

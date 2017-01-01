@@ -62,7 +62,7 @@ pause
 echo.
 echo.
 echo Allright, so you should have just granted me admin perms
-echo Not it's time to actually do my job
+echo Now it's time to actually do my job
 echo.
 pause
 @echo on
